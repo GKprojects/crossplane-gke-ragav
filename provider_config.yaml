@@ -3,10 +3,10 @@ kind: ProviderConfig
 metadata:
   name: default
 spec:
-  projectID: crossplaneprojects
+  projectID: gcpdevops-411907
   credentials:
     source: Secret
     secretRef:
-      namespace: upbound-system
+      namespace: crossplane-system
       name: gcp-secret
       key: creds
