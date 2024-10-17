@@ -3,7 +3,7 @@ kind: Cluster
 metadata:
   labels:
     cluster_name: gke
-  name: gke-managed-resources
+  name: CLUSTER_NAME
 spec:
   forProvider:
     enableAutopilot: false
@@ -30,9 +30,9 @@ spec:
       matchLabels:
         cluster_name: gke
     nodeConfig:
-      - machineType: e2-small
+      - machineType: MACHINE_TYPE
         diskSizeGb: 50
         oauthScopes:
           - https://www.googleapis.com/auth/cloud-platform
         preemptible: true
-    nodeCount: 1
+    nodeCount: NODE_COUNT
